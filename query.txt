@@ -1,0 +1,1 @@
+1. db.user.aggregate([{$lookup:{from:"purchase",localField:"_id",foreignField:"_id",to:"purchases"}}]).pretty()
