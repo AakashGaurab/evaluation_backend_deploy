@@ -15,6 +15,11 @@ app.use("/goldrates",auth,gold);
 app.use("/refresh_token",refresh)
 app.use("/userstats",auth,authorize(["manager"]),userstats);
 app.use("/user",user);
+
+app.get("/"(req,res)=>{
+    res.json("HI Welcome to my backend Server");
+})
+
 app.listen(process.env.port,async ()=>{
     try {
         await connect;
